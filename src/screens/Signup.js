@@ -120,7 +120,7 @@ class Signup extends Component {
             success
             && (
             <p className="bg-info text-white font-weight-bold">
-              Sign up Successful! Will be redirected to Login Page shortly.
+              Signup Successful! Will be redirected to Login Page shortly.
             </p>
             )
           }

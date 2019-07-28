@@ -62,7 +62,7 @@ class App extends Component {
   // eslint-disable-next-line no-shadow
   PrivateRoute = ({ component: Component, ...rest }) => (
     <Route
-     {...rest}
+      {...rest}
       render={(props) => {
         const { isLoggedIn, email } = this.state;
         if (isLoggedIn) {
