@@ -1,24 +1,10 @@
-# GuardianCare
+# sample react app
 
-The home health aid industry is one of the fastest growing sectors. As the population
-ages, more and more families seek professional nursing care for their elderly loved ones. In many cases, these older patients have some form of dementia or alzheimer's disease.
-Very often the family members of these patients don’t call or visit everyday because of work, living far away etc. This is doubly true for family members of patients with a memory loss disease such as dementia or alzheimers.
-Our application will enable a family member to create a secure profile for their loved one. Once they create this profile, they will be able to connect the nursing staff or home health aide to this same profile with a unique login. The nurse or nursing staff will have the ability to edit/update the patient’s vital signs, eating habits, activities of the day, anything else of note. The family members will be able to login into the app and view these updates in real time, anytime and anywhere.
-
-This application can potentially solve a few problems. Folks who are unable to speak to their elderly family member on a daily or even weekly basis will be able to feel more connected and informed. Besides sharing information, this can also mitigate calls to the nursing facility or staff, making their jobs a little easier.
-In addition, many home health aides or nurses are required by their facility or agency to report all activities and any updates after every single shift. This is typically accomplished through an automated phone system which reads throughs all the possible activities/duties of the day, and has the caregiver has to click a button (1 or 2) depending on if that activity was accomplished that day, or not. This process typically takes over 5 minutes. Sometimes nurses don’t go through the entire prompt (especially for the more difficult patients) , which creates further problems for the agency or facility. This application could allow nurses an easily accessible place to quickly and concisely sum up the day per regulation.
-
-
-
-
-Heroku Link: [http://guardiancare.herokuapp.com/]
-
+Live demo: [https://safe-woodland-90736.herokuapp.com](https://safe-woodland-90736.herokuapp.com)
 
 ## Version 03
 
 Build upon version02.
-
-Leverages passport library to implement authentication. Basic signup/login/logout functionality.
 
 Leverages passport library to implement authentication. Basic signup/login/logout functionality.
 
@@ -44,9 +30,9 @@ REACT_APP_UPLOAD_PRESET variable above.
 
 ### Installation instructions:
 
-* Clone repository: `[https://github.com/ambliach/GuardianCare]`
+* Clone repository: `git clone git@github.com:f-flores/reviewsession22.git`
 
-* Folder: `GuardianCare`, File: GuardianCare
+* Change directory to `version03` folder: `cd reviewsession22/version03`
 
 * Install npm packages using yarn: `yarn install`
 
