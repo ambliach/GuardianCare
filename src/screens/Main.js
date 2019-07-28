@@ -10,8 +10,6 @@ import Col from 'react-bootstrap/Col';
 import API from '../utils/API';
 import CloudinaryUploadWidget from '../components/CloudinaryUploadWidget';
 import ImagesLayout from '../components/ImagesLayout';
-import './Main.css';
-// import './Main.css';
 
 const Main = (props) => {
   const { isLoggedIn, email } = props;
@@ -21,7 +19,6 @@ const Main = (props) => {
   const [arrMediaInfo, setMediaInfo] = useState([]);
   let cloudinaryUrl = '';
   let source = {};
-
 
   // get user's stored pictures
   const getMediaInfo = useCallback(() => {
@@ -112,7 +109,7 @@ const Main = (props) => {
             </Form.Group>
             <Button
               type="submit"
-              className="btn btn-success add_to_album_btn"
+              className="btn btn-success"
               onClick={handleSubmit}
             >
               Add to Album

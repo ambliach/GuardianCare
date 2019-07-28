@@ -92,6 +92,7 @@ class Signup extends Component {
                 />
               </Form.Label>
               <Form.Text className="text-muted">
+                <span id="emailHelp">Enter your email</span>
               </Form.Text>
             </Form.Group>
             <Form.Group>

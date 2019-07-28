@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import styled from 'styled-components';
-import Icon from './GardianCompleteTransparent.png';
-import './nav.css';
 
 const StyledNavLink = styled(Nav.Item)`
   margin-left: 20px;
@@ -35,7 +33,7 @@ const NavMenu = (props) => {
   return (
     <Navbar bg="dark" variant="dark" expand="sm" className="mr-auto">
       <Navbar.Brand>
-        My App <img src={Icon} className='icon'/>
+        My App
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
