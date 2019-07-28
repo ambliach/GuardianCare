@@ -90,6 +90,7 @@ class Login extends Component {
                 />
               </Form.Label>
               <Form.Text className="text-muted">
+                <span id="emailHelp">Enter your email</span>
               </Form.Text>
             </Form.Group>
             <Form.Group>
@@ -107,7 +108,7 @@ class Login extends Component {
 
             <Button
               type="submit"
-              className="btn login-submit-btn"
+              className="btn btn-success"
               onClick={this.login}
             >
               Login
