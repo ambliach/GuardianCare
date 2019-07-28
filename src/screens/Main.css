@@ -9,3 +9,10 @@
   background-color: rgb(30,20,100);
   border-color: rgb(0,0,0)
 }
+
+.gANWLj.active {
+  font-weight: bold;
+  background-color: lightgray;
+  padding: 18px 5px 15px 10px;
+  margin: -17px 0px -16px 10px;
+  color: black;
