@@ -35,7 +35,7 @@ const NavMenu = (props) => {
   return (
     <Navbar bg="dark" variant="dark" expand="sm" className="mr-auto">
       <Navbar.Brand>
-        My App <img src={Icon} className='icon'/>
+        GuardianCare <img src={Icon} className='icon'/>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
