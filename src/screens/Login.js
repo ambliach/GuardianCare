@@ -91,6 +91,7 @@ class Login extends Component {
                 />
               </Form.Label>
               <Form.Text className="text-muted">
+                <span id="email help">Enter your email</span>
               </Form.Text>
             </Form.Group>
             <Form.Group>
