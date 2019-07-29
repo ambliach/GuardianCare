@@ -70,7 +70,8 @@ class Login extends Component {
 
     // If user is logged in, take them to main page
     if (isLoggedIn) {
-      return <Redirect to="/" />;
+      // eslint-disable-next-line react/jsx-filename-extension
+      return <Redirect to="./" />;
     }
 
     return (
