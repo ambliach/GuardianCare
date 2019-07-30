@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import styled from 'styled-components';
+import Icon from './Guardian.png';
+import './nav.css';
 
 const StyledNavLink = styled(Nav.Item)`
   margin-left: 20px;
@@ -32,17 +34,17 @@ const NavMenu = (props) => {
   const { isLoggedIn, email, location: { pathname } } = props;
   return (
     <Navbar bg="dark" variant="dark" expand="sm" className="mr-auto">
-      <Navbar.Brand>
-        My App
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-        <Nav className="text-white">
-          <LinkContainer exact to="/">
-            <StyledNavLink>
-              Home
-            </StyledNavLink>
-          </LinkContainer>
+    <Navbar.Brand>
+      GuardianCare <img src={Icon} className='icon'/>
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+      <Nav className="text-white">
+        <LinkContainer exact to="/">
+          <StyledNavLink>
+            Home
+          </StyledNavLink>
+        </LinkContainer>
           {
             isLoggedIn
               ? (
