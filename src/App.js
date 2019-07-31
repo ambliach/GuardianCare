@@ -19,6 +19,7 @@ class App extends Component {
     this.state = {
       isLoggedIn: false,
       email: '',
+      userId: '',
     };
     this.loginCheck = this.loginCheck.bind(this);
     this.source = {};
@@ -47,6 +48,7 @@ class App extends Component {
           this.setState({
             isLoggedIn: res.data.isLoggedIn,
             email: res.data.email,
+            userId: res.data.userId,
           });
         }
       })
@@ -64,10 +66,11 @@ class App extends Component {
     <Route
       {...rest}
       render={(props) => {
-        const { isLoggedIn, email } = this.state;
+        const { userId, isLoggedIn, email } = this.state;
         if (isLoggedIn) {
           return (
             <Component
+              userId={userId}
               email={email}
               isLoggedIn={isLoggedIn}
               {...props}
@@ -89,6 +92,7 @@ class App extends Component {
             render={props => (
               <NavMenu
                 {...props}
+                userId={userId}
                 isLoggedIn={isLoggedIn}
                 email={email}
               />
@@ -102,6 +106,7 @@ class App extends Component {
               render={props => (
                 <Login
                   {...props}
+                  userId={userId}
                   isLoggedIn={isLoggedIn}
                   email={email}
                   loginResult={this.getLoginResult}

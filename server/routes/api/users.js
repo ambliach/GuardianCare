@@ -14,7 +14,7 @@ router
     if (req.user) {
       // If logged in, send back this flag and the username itself
       // NOTE: you can send back whatever you want here
-      res.json({ isLoggedIn: true, email: req.user.email });
+      res.json({ userId: req.user.id, isLoggedIn: true, email: req.user.email });
     } else {
       // If user isn't logged in, send back false
       res.json(false);

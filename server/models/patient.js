@@ -12,7 +12,6 @@ var patientData = new Schema({
     date: { type: Date, default: Date.now },
     updated_at: {type: Date, default: Date.now},
     professionalId: {type: Schema.Types.ObjectId, ref: "Professional"}
-
 });
 
 // userSchema.pre("save", function(next){
@@ -29,3 +28,5 @@ var Patient = mongoose.model("Patient", patientData);
 
 module.exports = Patient;
 
+
+//patient form create hidden field with Id of login to link the two
