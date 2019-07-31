@@ -78,7 +78,7 @@ class Login extends Component {
       <Container className="my-5">
         <Row className="justify-content-center">
           <Form>
-            <h3>Login to MyApp</h3>
+            <h3>Login to GuardianCare</h3>
             <Form.Group>
               <Form.Label htmlFor="email">
                 Email
@@ -109,7 +109,7 @@ class Login extends Component {
 
             <Button
               type="submit"
-              className="btn btn-success"
+              className="btn login-submit-btn"
               onClick={this.login}
             >
               Login
