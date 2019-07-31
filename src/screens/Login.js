@@ -109,7 +109,7 @@ class Login extends Component {
 
             <Button
               type="submit"
-              className="btn btn-success"
+              className="btn login-submit-btn"
               onClick={this.login}
             >
               Login
