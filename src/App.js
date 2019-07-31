@@ -70,7 +70,7 @@ class App extends Component {
         if (isLoggedIn) {
           return (
             <Component
-              userId={userId}
+              userId={this.state.userId}
               email={email}
               isLoggedIn={isLoggedIn}
               {...props}
@@ -92,7 +92,7 @@ class App extends Component {
             render={props => (
               <NavMenu
                 {...props}
-                userId={userId}
+                userId={this.state.userId}
                 isLoggedIn={isLoggedIn}
                 email={email}
               />
@@ -106,7 +106,7 @@ class App extends Component {
               render={props => (
                 <Login
                   {...props}
-                  userId={userId}
+                  userId={this.state.userId}
                   isLoggedIn={isLoggedIn}
                   email={email}
                   loginResult={this.getLoginResult}
