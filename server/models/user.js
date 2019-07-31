@@ -26,7 +26,4 @@ User.plugin(passportLocalMongoose, {
   },
 });
 
-
-var User = mongoose.model("User", User);
-
 module.exports = mongoose.model('User', User);
