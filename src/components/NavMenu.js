@@ -14,8 +14,7 @@ const StyledNavLink = styled(Nav.Item)`
     color: black;
   }
   &.welcome {
-    color: lightgreen;
-    font-weight: bold;
+    color: lightgreen;    font-weight: bold;
     background-color: transparent;
   }
   &:hover {
