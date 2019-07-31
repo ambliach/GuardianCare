@@ -22,7 +22,11 @@ User.plugin(passportLocalMongoose, {
   usernameField: 'email',
   errorMessages: {
     UserExistsError: 'A user with the given email is already registered',
+
   },
 });
+
+
+var User = mongoose.model("User", User);
 
 module.exports = mongoose.model('User', User);
