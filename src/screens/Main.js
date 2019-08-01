@@ -81,7 +81,7 @@ const Main = (props) => {
   }
 
   return (
-    <Container>
+          <Container>
       <Row className="justify-content-center mt-3">
         <Col xs={12} md={8}>
           <h3 className="text-center">
@@ -223,8 +223,9 @@ const Main = (props) => {
 
 </Form.Row>
       <Button type="submit">Submit form</Button>
+      </Form.Group>
     </Jumbotron>
-    </Container>
+</Container>
   );
 };
 
