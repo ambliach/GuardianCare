@@ -152,6 +152,7 @@ const Main = (props) => {
         </Form.Group>
      </Form.Row>
 
+   <Row>
   <Form.Group controlID="formgridMental">
    <Form.Label>Mental Rating</Form.Label>
    <Form.Control as="select">
@@ -163,7 +164,7 @@ const Main = (props) => {
   </Form.Control>
 
 
-<Form.Row>
+
   <Form.Group controlID="formgridRespiration">
    <Form.Label>Respiration Rating</Form.Label>
    <Form.Control as="select">
@@ -213,15 +214,15 @@ const Main = (props) => {
     <option>5</option>
   </Form.Control>
  </Form.Group>
-</Form.Row>
+</Row>
 
-<Form.Row>
+<Row>
   <Form.Group controlId="formgridComments">
   <Form.Label>Comments:</Form.Label>
   <Form.Control as="textarea" rows="3" />
 </Form.Group>
 
-</Form.Row>
+</Row>
       <Button type="submit">Submit form</Button>
       </Form.Group>
     </Jumbotron>
