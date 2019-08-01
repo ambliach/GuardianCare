@@ -12,74 +12,99 @@ import API from '../utils/API';
 import CloudinaryUploadWidget from '../components/CloudinaryUploadWidget';
 import ImagesLayout from '../components/ImagesLayout';
 import './Main.css';
+import { api } from 'cloudinary/lib-es5/cloudinary';
 
-const Main = (props) => {
+class Main extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {name: "",
+      mental: 0,
+      respiration: 0,
+      gastro: 0,
+      urinary: 0,
+      muscular: 0,
+      comments: [{ body: "" }],
+      professionalId: 0
+  }
+}     
+      
   const { isLoggedIn, email } = props;
-  const [description, setDescription] = useState('');
-  const [isValid, setIsValid] = useState(true);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [description, setDescription] = useState('');
+  // const [isValid, setIsValid] = useState(true);
+  // const [isSubmitted, setIsSubmitted] = useState(false);
   const [arrMediaInfo, setMediaInfo] = useState([]);
-  let cloudinaryUrl = '';
+  // let cloudinaryUrl = '';
   let source = {};
+  
 
   // get user's stored pictures
-  const getMediaInfo = useCallback(() => {
-    API
-      .getMediaInfo(source)
-      .then(res => setMediaInfo(res.data.pics))
-      .catch((err) => {
-        console.log(`Something went wrong in data retrieval ${JSON.stringify(err)}`);
-      });
-  }, [arrMediaInfo]);
+  // getMediaInfo = useCallback(() => {
+  //   API
+  //     .getMediaInfo(source)
+  //     .then(res => setMediaInfo(res.data.pics))
+  //     .catch((err) => {
+  //       console.log(`Something went wrong in data retrieval ${JSON.stringify(err)}`);
+  //     });
+  // }, [arrMediaInfo]);
 
-  useEffect(() => {
-    source = axios.CancelToken.source();
-    getMediaInfo();
+  // useEffect(() => {
+  //   source = axios.CancelToken.source();
+  //   getMediaInfo();
 
-    return function cleanup() { // like ComponentWillUnmount
-      API.cancelRequest(source);
-    };
-  }, []); // like ComponentDidMount()
+  //   return function cleanup() { // like ComponentWillUnmount
+  //     API.cancelRequest(source);
+  //   };
+  // }, []); // like ComponentDidMount()
 
-  const resetValues = () => {
-    setIsValid(true);
-    setDescription('');
-    setIsSubmitted(true);
-    cloudinaryUrl = '';
+  //  resetValues = () => {
+  //   setIsValid(true);
+  //   setDescription('');
+  //   setIsSubmitted(true);
+  //   cloudinaryUrl = '';
+  // };
+
+  // handleOnChange = (event) => {
+  //   event.preventDefault();
+  //   const { value } = event.target;
+  //   setDescription(value);
+
+  // };
+ handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    const { name, value } = event.target;
+
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
   };
 
-  const handleOnChange = (event) => {
-    event.preventDefault();
-    const { value } = event.target;
-    setDescription(value);
-  };
+  // handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   if (!(cloudinaryUrl && description)) {
+  //     setIsValid(false);
+  //     return;
+  //   }
+  //   API
+  //     .postInfo({
+  //       picUrl: cloudinaryUrl,
+  //       note: description,
+  //     }, source)
+  //     .then(() => {
+  //       getMediaInfo();
+  //       resetValues();
+  //     })
+  //     .catch(err => console.log(err));
+  // };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (!(cloudinaryUrl && description)) {
-      setIsValid(false);
-      return;
-    }
-    API
-      .postInfo({
-        picUrl: cloudinaryUrl,
-        note: description,
-      }, source)
-      .then(() => {
-        getMediaInfo();
-        resetValues();
-      })
-      .catch(err => console.log(err));
-  };
+  // setCloudinaryInfo = (imgUrl) => {
+  //   cloudinaryUrl = imgUrl;
+  // };
 
-  const setCloudinaryInfo = (imgUrl) => {
-    cloudinaryUrl = imgUrl;
-  };
-
-  if (!isLoggedIn) {
-    return <Redirect to="/login" />;
-  }
-
+  // if (!isLoggedIn) {
+  //   return <Redirect to="/login" />;
+  // }
+render(){
   return (
     <Container>
       <Row className="justify-content-center mt-3">
@@ -89,7 +114,7 @@ const Main = (props) => {
             {' '}
             {email}
           </h3>
-          <Form>
+          {/* {/* <Form> */}
             <h3>Upload Picture</h3>
             <Form.Group>
               <Form.Label htmlFor="description">
@@ -117,7 +142,7 @@ const Main = (props) => {
             >
               Add to Album
             </Button>
-          </Form>
+          </Form> */}
         </Col>
       </Row>
       <Row className="justify-content-center">
@@ -138,20 +163,20 @@ const Main = (props) => {
       <Jumbotron>
       <Form.Row>
        <Form.Group as={Col} controlId="formGridFirstName">
-          <Form.Label>Patient's First Name</Form.Label>
-          <Form.Control placeholder="First Name" />
+          <Form.Label>Patient's Name</Form.Label>
+          <Form.Control name = "name" placeholder="Name" />
         </Form.Group>
-​
+{/* ​
        <Form.Group as={Col} controlId="formGridLastName">
           <Form.Label>Patient's Last Name</Form.Label>
           <Form.Control placeholder="Last Name" />
         </Form.Group>
-     </Form.Row>
-
+     </Form.Row> */}
+</Form.Row>
       <Form.Row>
   <Form.Group controlID="formgridMental">
    <Form.Label>Mental Rating</Form.Label>
-   <Form.Control as="select">
+   <Form.Control name = "mental" as="select">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -164,7 +189,7 @@ const Main = (props) => {
       <Form.Row>
   <Form.Group controlID="formgridRespiration">
    <Form.Label>Respiration Rating</Form.Label>
-   <Form.Control as="select">
+   <Form.Control name = "respiration" as="select">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -177,7 +202,7 @@ const Main = (props) => {
       <Form.Row>
   <Form.Group controlID="formgridGastro">
    <Form.Label>Gastrointestinal Rating</Form.Label>
-   <Form.Control as="select">
+   <Form.Control name = "gastro" as="select">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -190,7 +215,7 @@ const Main = (props) => {
       <Form.Row>
   <Form.Group controlID="formgridUrinary">
    <Form.Label>Urinary Rating</Form.Label>
-   <Form.Control as="select">
+   <Form.Control name = "urinary" as="select">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -203,7 +228,7 @@ const Main = (props) => {
       <Form.Row>
   <Form.Group controlID="formgridMuscular">
    <Form.Label>Muscular Rating</Form.Label>
-   <Form.Control as="select">
+   <Form.Control name = "muscular" as="select">
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -216,19 +241,19 @@ const Main = (props) => {
       <Form.Row>
   <Form.Group controlId="formgridComments">
   <Form.Label>Comments:</Form.Label>
-  <Form.Control as="textarea" rows="3" />
+  <Form.Control name = "comments" as="textarea" rows="3" />
 </Form.Group>
   <Form.Group as={Col} controlId="formGridDate">
        <Form.Label>Date</Form.Label>
        <Form.Control type='date' placeholder="xx/xx/xxxx" />
      </Form.Group>
 </Form.Row>
-      <Button type="submit">Submit form</Button>
+      <Button type="submit" onClick = {() => API.createPatient(this.state)} >Submit form</Button>
     </Jumbotron>
     </Container>
   );
 };
-
+}
 Main.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
   email: PropTypes.string.isRequired,

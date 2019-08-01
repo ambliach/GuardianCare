@@ -30,4 +30,11 @@ export default {
     source.cancel('API request cancelled.');
     return true;
   },
+
+  createPatient(patientData) {
+    console.log(patientData)
+    return axios.post("/api/patient", patientData);
+  }
+
+
 };
