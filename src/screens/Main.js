@@ -138,23 +138,29 @@ const Main = (props) => {
             <Jumbotron>
     <Form>
      <h3>Paitient Information</h3>
-        <Form.Row>
+        <Row>
+          <Col>
         <Form.Group as={Col} controlId="formGridDate">
         <Form.Label>Date</Form.Label>
         <Form.Control type='date' placeholder="xx/xx/xxxx" />
       </Form.Group>
+      </Col>
+      <Col>
         <Form.Group as={Col} controlId="formGridFirstName">
          <Form.Label>Patient's First Name</Form.Label>
          <Form.Control placeholder="First Name" />
        </Form.Group>
-​
+      </Col>
+      <Col>
         <Form.Group as={Col} controlId="formGridLastName">
          <Form.Label>Patient's Last Name</Form.Label>
          <Form.Control placeholder="Last Name" />
        </Form.Group>
-      </Form.Row>
+       </Col>
+      </Row>
 
         <Row>
+          <Col>
      <Form.Group controlID="formgridMental">
     <Form.Label>Mental Rating</Form.Label>
     <Form.Control as="select">
@@ -165,8 +171,8 @@ const Main = (props) => {
      <option>5</option>
    </Form.Control>
   </Form.Group>
-
-
+</Col>
+  <Col>
      <Form.Group controlID="formgridRespiration">
     <Form.Label>Respiration Rating</Form.Label>
     <Form.Control as="select">
@@ -177,9 +183,9 @@ const Main = (props) => {
      <option>5</option>
    </Form.Control>
   </Form.Group>
+</Col>
 
-
-
+<Col>
      <Form.Group controlID="formgridGastro">
     <Form.Label>Gastrointestinal Rating</Form.Label>
     <Form.Control as="select">
@@ -190,9 +196,9 @@ const Main = (props) => {
      <option>5</option>
    </Form.Control>
   </Form.Group>
+</Col>
 
-
-
+<Col>
      <Form.Group controlID="formgridUrinary">
     <Form.Label>Urinary Rating</Form.Label>
     <Form.Control as="select">
@@ -203,9 +209,9 @@ const Main = (props) => {
      <option>5</option>
    </Form.Control>
   </Form.Group>
+</Col>
 
-
-
+<Col>
      <Form.Group controlID="formgridMuscular">
     <Form.Label>Muscular Rating</Form.Label>
     <Form.Control as="select">
@@ -216,6 +222,7 @@ const Main = (props) => {
      <option>5</option>
    </Form.Control>
   </Form.Group>
+  </Col>
    </Row>
 
 
