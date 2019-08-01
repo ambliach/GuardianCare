@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Nav, Navbar } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import styled from 'styled-components';
-import Icon from './Guardian.png';
+import Icon from './guardiancare.png';
 import './nav.css';
 
 const StyledNavLink = styled(Nav.Item)`
