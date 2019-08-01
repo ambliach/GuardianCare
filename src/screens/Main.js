@@ -223,7 +223,7 @@ const Main = (props) => {
       <Form.Control type='date' placeholder="xx/xx/xxxx" />
     </Form.Group>
       </Form.Row>
-
+      <Button type="submit">Submit form</Button>
     </Jumbotron>
 </Container>
   );
