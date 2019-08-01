@@ -134,7 +134,6 @@ const Main = (props) => {
       <Row className="justify-content-center">
         <ImagesLayout images={arrMediaInfo} />
       </Row>
-    </Container>
 
     <Jumbotron>
      <Form.Row>
@@ -226,6 +225,7 @@ const Main = (props) => {
       </Form.Row>
 
     </Jumbotron>
+</Container>
   );
 };
 
