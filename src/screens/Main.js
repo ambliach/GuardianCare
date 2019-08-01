@@ -162,7 +162,7 @@ const Main = (props) => {
     <option>4</option>
     <option>5</option>
   </Form.Control>
-
+  </Form.Group>
 
 
   <Form.Group controlID="formgridRespiration">
@@ -214,7 +214,8 @@ const Main = (props) => {
     <option>5</option>
   </Form.Control>
  </Form.Group>
-</Row>
+ </Row>
+
 
 <Row>
   <Form.Group controlId="formgridComments">
