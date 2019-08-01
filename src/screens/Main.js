@@ -81,8 +81,8 @@ const Main = (props) => {
   }
 
   return (
-          <Container>
-      <Row className="justify-content-center mt-3">
+    <Container>
+            <Row className="justify-content-center mt-3">
         <Col xs={12} md={8}>
           <h3 className="text-center">
             Main page
@@ -120,7 +120,7 @@ const Main = (props) => {
           </Form>
         </Col>
       </Row>
-      <Row className="justify-content-center">
+            <Row className="justify-content-center">
         {
           !isValid
             ? (
@@ -131,103 +131,105 @@ const Main = (props) => {
             : null
         }
       </Row>
-      <Row className="justify-content-center">
+            <Row className="justify-content-center">
         <ImagesLayout images={arrMediaInfo} />
       </Row>
 
-      <Jumbotron>
-      <Form.Row>
-      <Form.Group as={Col} controlId="formGridDate">
-       <Form.Label>Date</Form.Label>
-       <Form.Control type='date' placeholder="xx/xx/xxxx" />
-     </Form.Group>
-       <Form.Group as={Col} controlId="formGridFirstName">
-          <Form.Label>Patient's First Name</Form.Label>
-          <Form.Control placeholder="First Name" />
-        </Form.Group>
+            <Jumbotron>
+    <Form>
+     <h3>Paitient Information</h3>
+        <Form.Row>
+        <Form.Group as={Col} controlId="formGridDate">
+        <Form.Label>Date</Form.Label>
+        <Form.Control type='date' placeholder="xx/xx/xxxx" />
+      </Form.Group>
+        <Form.Group as={Col} controlId="formGridFirstName">
+         <Form.Label>Patient's First Name</Form.Label>
+         <Form.Control placeholder="First Name" />
+       </Form.Group>
 ​
-       <Form.Group as={Col} controlId="formGridLastName">
-          <Form.Label>Patient's Last Name</Form.Label>
-          <Form.Control placeholder="Last Name" />
-        </Form.Group>
-     </Form.Row>
+        <Form.Group as={Col} controlId="formGridLastName">
+         <Form.Label>Patient's Last Name</Form.Label>
+         <Form.Control placeholder="Last Name" />
+       </Form.Group>
+      </Form.Row>
 
-   <Row>
-  <Form.Group controlID="formgridMental">
-   <Form.Label>Mental Rating</Form.Label>
-   <Form.Control as="select">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </Form.Control>
+        <Row>
+     <Form.Group controlID="formgridMental">
+    <Form.Label>Mental Rating</Form.Label>
+    <Form.Control as="select">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+   </Form.Control>
   </Form.Group>
 
 
-  <Form.Group controlID="formgridRespiration">
-   <Form.Label>Respiration Rating</Form.Label>
-   <Form.Control as="select">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </Form.Control>
- </Form.Group>
+     <Form.Group controlID="formgridRespiration">
+    <Form.Label>Respiration Rating</Form.Label>
+    <Form.Control as="select">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+   </Form.Control>
+  </Form.Group>
 
 
 
-  <Form.Group controlID="formgridGastro">
-   <Form.Label>Gastrointestinal Rating</Form.Label>
-   <Form.Control as="select">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </Form.Control>
- </Form.Group>
+     <Form.Group controlID="formgridGastro">
+    <Form.Label>Gastrointestinal Rating</Form.Label>
+    <Form.Control as="select">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+   </Form.Control>
+  </Form.Group>
 
 
 
-  <Form.Group controlID="formgridUrinary">
-   <Form.Label>Urinary Rating</Form.Label>
-   <Form.Control as="select">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </Form.Control>
- </Form.Group>
+     <Form.Group controlID="formgridUrinary">
+    <Form.Label>Urinary Rating</Form.Label>
+    <Form.Control as="select">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+   </Form.Control>
+  </Form.Group>
 
 
 
-  <Form.Group controlID="formgridMuscular">
-   <Form.Label>Muscular Rating</Form.Label>
-   <Form.Control as="select">
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-  </Form.Control>
- </Form.Group>
- </Row>
+     <Form.Group controlID="formgridMuscular">
+    <Form.Label>Muscular Rating</Form.Label>
+    <Form.Control as="select">
+     <option>1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+     <option>5</option>
+   </Form.Control>
+  </Form.Group>
+   </Row>
 
 
-<Row>
+  <Row>
   <Form.Group controlId="formgridComments">
-  <Form.Label>Comments:</Form.Label>
-  <Form.Control as="textarea" rows="3" />
-</Form.Group>
+    <Form.Label>Comments:</Form.Label>
+    <Form.Control as="textarea" rows="3" />
+  </Form.Group>
 
 </Row>
-      <Button type="submit">Submit form</Button>
-      </Form.Group>
-    </Jumbotron>
-</Container>
+        <Button type="submit">Submit form</Button>
+        </Form>
+      </Jumbotron>
+    </Container>
   );
 };
 
